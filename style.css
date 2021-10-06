@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#000412 ;
+    color:aliceblue;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+label{
+    font-size: 45px;
+}
+
+select{
+    margin-top: 40px;
+    border-radius: 5px;
+    font-size: 14px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 10x 15px;
+    outline: none;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+#empty{
+    background-color: #2e2e2e;
+    height: 25px;
+    width: 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-right: 5px;
+}
+#selected{
+    background-color: aqua;
+    height: 25px;
+    width: 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-right: 5px;
+}
+#occupied{
+    background-color: white;
+    height: 25px;
+    width: 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-right: 5px;
+}
+li{
+    margin-left: 30px;
+    display: flex;
+}
+li:nth-child(1){
+    margin-left: 0%;
+}
+
+#seat.occupied{
+    background-color: white;
+    height: 25px;
+    width: 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-right: 8px;
+}
+
+#seat:not(.occupied):hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#seat:not(.occupied):focus{
+    background-color:aqua;
+}
+
+#seat{
+    background-color: #2e2e2e;
+    height: 25px;
+    width: 30px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-right: 5px;
+    margin: 8px;
+}
+
+#row{
+    display: flex;
+}
+
+#container{
+    margin-top: 40px;
+    perspective: 700px;
+}
+
+#screen{
+    width: 90%;
+    height: 70px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    transform: rotateX(-45deg);
+    box-shadow:0px 3px 10px rgba(255, 255, 255, 70%);
+}
