@@ -1,13 +1,13 @@
 const seats=document.querySelectorAll('#seat');
 const movie=document.querySelector('select');
 const spans=document.querySelectorAll('span');
-let moviePrice=0;
+let moviePrice=30;
 let id1=-1,id2=-1;
 let seatNum=0;
 
 
 
-localStorage.removeItem( "chairs" );
+//localStorage.removeItem( "chairs" );
 
 let chairs=JSON.parse(localStorage.getItem('chairs'));
 if(chairs==null)
@@ -17,7 +17,6 @@ if(chairs==null)
         chair=0;
     });
 }
-console.log(chairs);
 
 if(chairs!=null){
     seats.forEach(seat =>{
@@ -26,10 +25,10 @@ if(chairs!=null){
             seat[id2]=1;
             seat.className='selected';
             seatNum++;
-            spans[0].textContent=seatNum;
-            spans[1].textContent=seatNum*moviePrice+'$';
         }
     });
+    spans[0].textContent=seatNum;
+    spans[1].textContent=seatNum*moviePrice+'$';
 }
 
 
